@@ -34,9 +34,9 @@ setup(
   url = 'https://github.com/tasdikrahman/xkcd-dl', 
   license = 'MIT',
   install_requires = [
-    "beautifulsoup4==4.4.1",
-    "python-magic==0.4.10",
-    "requests==2.8.1",
+    "beautifulsoup4==4.11.1",
+    "python-magic==0.4.27",
+    "requests==2.28.1",
   ],
   ### adding package data to it 
   packages=find_packages(exclude=['contrib', 'docs', 'tests']),
