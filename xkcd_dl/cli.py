@@ -43,7 +43,7 @@ excludeList = ['1350','1416','1525','1608','1416','1506','1446','1663' ]
 def download_all(thread):
     json_content = read_dict()
     if json_content:
-        print("Downloading all xkcd's Till date!!")
+        print("Downloading all xkcd's to date...")
         all_keys = list(json_content.keys())
         if thread:
             results = ThreadPool(thread).imap(partial(download_one, json_content), all_keys)
@@ -56,14 +56,14 @@ def download_all(thread):
 
 def download_xkcd_range(*something):
     if len(something) != 2:
-        print('Exactly two values are required for this.')
+        print('Exactly two values are required.')
     else:
         start, end = something
 
         json_content = read_dict()
         if json_content:
             if start > end:
-                print('Start must be smaller than End.')
+                print('Start must be smaller than end.')
                 return
 
             if is_valid_comic(start) and is_valid_comic(end):
